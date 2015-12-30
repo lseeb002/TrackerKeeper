@@ -1,0 +1,15 @@
+Income 0
+Eating_Out 0
+Groceries 0
+Rent 0
+Utilities 0
+Gifts 0
+Dogs 0
+Misc 0
+Party 0
+Meds 0
+Herbalife 0
+Concerts 0
+Gas 0
+Car 0
+Entertainment 0
