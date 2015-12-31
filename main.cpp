@@ -22,6 +22,11 @@ struct Month {
 
 int read_entries(string file, Month& m){
     file += ".txt";
+    //Open file for writing to create if it hasn't been created yet
+    //Then immediately close it
+    ofstream f(file.c_str(), ofstream::out | ofstream::app);
+    f.close();
+    //Actually read the file (equivalent process for read_cats())
     ifstream fin(file.c_str());
     if (!fin.is_open()){
 	cout << "Error Opening File" << endl;
@@ -65,6 +70,8 @@ void print_cats(const map<string,double>& c){
 
 int read_cats(string file, map<string,double>& cats){
     file += "cat.txt";
+    ofstream f(file.c_str(), ofstream::out | ofstream::app);
+    f.close();
     ifstream fin(file.c_str());
     if (!fin.is_open()){
         cout << "Error Opening File" << endl;
